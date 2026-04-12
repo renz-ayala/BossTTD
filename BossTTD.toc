@@ -1,0 +1,7 @@
+## Interface: 20505
+## Title: Boss Time To Die
+## Notes: A simple addon that calculate the deathtime.
+## Author: Rayalaj
+## Version: 1.0
+BossTTD.lua
+
