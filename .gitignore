@@ -1,0 +1,22 @@
+# Extensiones de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores y VS Code
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Binarios compilados
+*.out
+*.o
+*.so
+*.dll
+*.dylib
+*.exe
+
+# LuaRocks
+lua_modules/
+*.rock
