@@ -1,15 +1,15 @@
-# Extensiones de sistema
+# System extensions
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# Editores y VS Code
+# IDES & VS Code
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Binarios compilados
+# compiled binaries
 *.out
 *.o
 *.so
