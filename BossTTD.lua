@@ -5,11 +5,11 @@ local inRaid = false
 --local minDmg = 1000
 
 local cds = {
-    ["Blood Fury"] = { duration = 15, id = 20572 },
-    ["Death Wish"] = { duration = 30, id = 12292 },
-    ["Bloodlust Brooch"] = { duration = 20, id = 29383 },
-    ["Abacus of Violent Odds"] = { duration = 10, id = 28288 },
-    ["Recklessness"] = { duration = 15, id = 1719 }
+    ["Racial"] = { duration = 15, id = 20572 },
+    ["DW"] = { duration = 30, id = 12292 },
+    ["14"] = { duration = 20, id = 29383 },
+    ["13"] = { duration = 10, id = 28288 },
+    ["RecK"] = { duration = 15, id = 1719 }
 }
 
 local alertFrame = CreateFrame("Frame", nil, PlayerFrame)
@@ -22,9 +22,12 @@ alertFrame.alertText:SetPoint("TOP", alertFrame, "TOP", 0, 10)
 alertFrame.alertText:SetTextColor(0, 1, 0)
 alertFrame.alertText:Hide()
 --TTD
-alertFrame.timerText = alertFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+--alertFrame.timerText = alertFrame:CreateFontString(nil, "OVERLAY", "GameFontHighlightSmall")
+alertFrame.timerText = alertFrame:CreateFontString(nil, "OVERLAY", "GameFontNormalHuge")
+alertFrame.timerText:SetFont("Fonts\\FRIZQT__.TTF", 20, "THICKOUTLINE, MONOCHROME")
+alertFrame.timerText:SetTextColor(0, 1, 0)
 alertFrame.timerText:SetPoint("BOTTOM")
-alertFrame.timerText:SetText("Dead: --:--")
+alertFrame.timerText:SetText("[--:--]")
 
 local frame = CreateFrame("Frame")
 frame:RegisterEvent("PLAYER_TARGET_CHANGED")
@@ -111,7 +114,7 @@ frame:SetScript("OnUpdate", function(self, elapsed)
             if ttDie > 0 and ttDie < 600 then
                 local m = math.floor(ttDie / 60)
                 local s = math.floor(ttDie % 60)
-                alertFrame.timerText:SetText(string.format("Dead: %02d:%02d", m, s))
+                alertFrame.timerText:SetText(string.format("[%02d:%02d]", m, s))
 
                 local now = GetTime()
                 if now - lastPrint > 1.5 then
@@ -139,11 +142,11 @@ frame:SetScript("OnUpdate", function(self, elapsed)
                     end
                 end
             else
-                alertFrame.timerText:SetText("Dead: --:--")
+                alertFrame.timerText:SetText("[--:--]")
             end
         end
     else
-        alertFrame.timerText:SetText("Dead: --:--")
+        alertFrame.timerText:SetText("[--:--]")
     end
 end)
 
