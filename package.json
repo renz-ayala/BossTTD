@@ -1,0 +1,27 @@
+{
+  "name": "bossttd",
+  "version": "1.0.0",
+  "description": "1. Go to .\\World of Warcraft\\_anniversary_\\Interface\\AddOns\r 2. Paste addon.\r 3. Run WoW",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "powershell -ExecutionPolicy Bypass -File ./build.ps1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renz-ayala/BossTTD.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/renz-ayala/BossTTD/issues"
+  },
+  "homepage": "https://github.com/renz-ayala/BossTTD#readme",
+  "devDependencies": {
+    "lua-types": "^2.14.1",
+    "typescript": "^6.0.2",
+    "typescript-to-lua": "^1.37.1"
+  }
+}

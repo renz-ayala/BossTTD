@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "types": [
+      "@typescript-to-lua/language-extensions"
+    ],
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "moduleResolution": "bundler",
+    "rootDir": "./src",
+    "outDir": "./dist/BossTTD",
+    "ignoreDeprecations": "5.0"
+  },
+  "tstl": {
+    "luaTarget": "5.1",
+    "luaLibImport": "inline",
+    "luaBundle": "dist/BossTTD/BossTTD.lua",
+    "luaBundleEntry": "src/BossTTD.ts"
+  },
+  "include": ["src/**/*"]
+}
